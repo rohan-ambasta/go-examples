@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/rohan-ambasta/go-practice/examples/packages/utils"
+	"github.com/rohan-ambasta/go-examples/examples/packages/utils"
 )
 
 func main() {
