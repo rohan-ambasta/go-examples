@@ -28,6 +28,13 @@ func (rect rectangle) perimeter() float64 {
 	return 2*rect.length + 2*rect.width
 }
 
+// implement String() method of Stringer interface to create a custom string
+// representaion of the receiver
+// similar to the toString method in java
+func (rect rectangle) String() string {
+	return fmt.Sprintf("length=%f, width=%f\n", rect.length, rect.width)
+}
+
 func (c *circle) area() float64 {
 	if c == nil {
 		fmt.Printf("%v %T\n", c, c)
@@ -38,6 +45,10 @@ func (c *circle) area() float64 {
 
 func (c circle) perimeter() float64 {
 	return 2 * math.Pi * c.radius
+}
+
+func (c circle) String() string {
+	return fmt.Sprintf("radius=%f\n", c.radius)
 }
 
 func measure(s Shape) {
