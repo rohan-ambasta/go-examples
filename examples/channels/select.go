@@ -21,6 +21,9 @@ func main() {
 		c2 <- "two"
 	}()
 
+	//make this interesting and observe
+	//time.Sleep(time.Second * 5)
+
 	for i := 0; i < 2; i++ {
 		select {
 		case msg1 := <-c1:

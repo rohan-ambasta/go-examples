@@ -18,9 +18,13 @@ func main() {
 	// because there is no goroutine with a send channel
 	//fmt.Println(<- messages)
 
+	//go func() {
 	// create an un-buffered channel
 	//messages1 := make(chan string)
 	// we will get a deadlock with the below code because there is no
 	// go routine with a receive channel
+	//uncomment line 21 and 27 to remove the deadlock
 	//messages1 <- "msg3"
+	//} ()
+
 }
