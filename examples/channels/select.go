@@ -24,12 +24,14 @@ func main() {
 	//make this interesting and observe
 	//time.Sleep(time.Second * 5)
 
-	for i := 0; i < 2; i++ {
+	for i := 0; i < 1; i++ {
 		select {
 		case msg1 := <-c1:
 			fmt.Println("received ", msg1)
 		case msg2 := <-c2:
 			fmt.Println("received ", msg2)
+		default:
+			fmt.Println("default msg")
 		}
 	}
 }
