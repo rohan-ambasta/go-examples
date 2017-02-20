@@ -45,7 +45,7 @@ func main() {
 	}
 
 	_, e := f2(12)
-	//If you want to programmatically use the data
+	//If you want to use the data
 	// in a custom error, you’ll need to get the error as an instance
 	//of the custom error type via type assertion.
 	if custErr, ok := e.(*customError); ok {
